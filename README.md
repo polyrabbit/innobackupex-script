@@ -27,7 +27,7 @@ root@prd-db01:/data/backups/mysql# tree -L 2
 
 计划任务执行脚本
 
-    /root/mysql_backup/db01_mysql.sh
+    /root/mysql_backup/backup.sh
     
 备份策略
 
@@ -42,10 +42,10 @@ crontab(whenever):
 
 ```ruby
 every :day, :at => '2:00am' do
-  command "/root/mysql_backup/db01_mysql.sh"
+  command "/root/mysql_backup/backup.sh"
 end
 ```
 
 ```
-0 2 * * * /bin/bash -l -c '/root/mysql_backup/db01_mysql.sh'
+0 2 * * * /bin/bash -l -c '/root/mysql_backup/backup.sh'
 ```
