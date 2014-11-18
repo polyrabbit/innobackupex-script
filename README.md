@@ -1,5 +1,9 @@
 # mysql 备份脚本
 
+需要安装percona-xtrabackup
+
+    root@dev-web02:~/mysql_backup# apt-get install percona-xtrabackup
+
 From: https://gist.github.com/DamianCaruso/931358
 
 USEROPTIONS选项修改密码
